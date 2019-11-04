@@ -13,10 +13,14 @@ public class Array {
         N = n;
     }
 
-
-    public int moveArray(int[]array, int N) {
+    public void moveArray(int[]array, int N) {
         for (int i = 0; i < array.length; i++) {
+            array[i] = array[i+N];
+            if(N>= array.length && N<=0){
+                System.out.println(array[i]);
+            }
+            else
+                System.out.println(array[N+i]);
         }
-        return N;
     }
 }
